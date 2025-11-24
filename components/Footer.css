@@ -1,0 +1,14 @@
+/* Footer Component Styles */
+.site-footer {
+  background-color: #f9f9f9;
+  margin-top: 60px;
+}
+
+.site-footer .block-7 p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.site-footer .address {
+  line-height: 1.8;
+}

@@ -1,0 +1,149 @@
+/* Thank You Page Styles */
+
+.py-5 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.thank-you-card {
+  padding: 60px 40px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.thank-you-icon {
+  width: 100px;
+  height: 100px;
+  background: #51eaea;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  font-size: 48px;
+  color: #000;
+  font-weight: 700;
+}
+
+.thank-you-card h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #25262a;
+}
+
+.thank-you-card .lead {
+  font-size: 18px;
+  color: #8c92a0;
+  line-height: 1.8;
+}
+
+.order-details {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row span:first-child {
+  color: #8c92a0;
+  font-weight: 600;
+}
+
+.detail-row span:last-child {
+  color: #25262a;
+  font-weight: 600;
+}
+
+.order-number {
+  font-family: monospace;
+  font-size: 16px;
+  color: #51eaea !important;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.button-group .btn {
+  min-width: 180px;
+  text-align: center;
+}
+
+.info-box {
+  padding: 30px;
+  background: #fff;
+  border-radius: 4px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.info-box:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: #51eaea;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+}
+
+.info-box h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #25262a;
+  margin-bottom: 12px;
+}
+
+.info-box p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #8c92a0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .thank-you-card {
+    padding: 40px 20px;
+  }
+
+  .thank-you-card h2 {
+    font-size: 28px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group .btn {
+    min-width: 100%;
+  }
+
+  .step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
