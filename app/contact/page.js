@@ -19,7 +19,7 @@ export default function Contact() {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="site-section-heading text-center">Liên hệ chúng tôi</h2>
+              <h2 className="site-section-heading text-center">Liên hệ chúng tôi để được tư vấn kĩ hơn</h2>
             </div>
           </div>
         </div>

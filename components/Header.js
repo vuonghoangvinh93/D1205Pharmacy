@@ -73,7 +73,7 @@ export default function Header() {
           <div className="d-flex align-items-center justify-content-between">
             <div className="logo">
               <div className="site-logo">
-                <Link href="/">D1205Pharma</Link>
+                <Link href="/">Chăm sóc sức khỏe 4.0</Link>
               </div>
             </div>
 
@@ -83,25 +83,26 @@ export default function Header() {
                   <li className="active">
                     <Link href="/">Trang chủ</Link>
                   </li>
-                  <li>
-                    <Link href="/shop">Cửa hàng</Link>
-                  </li>
                   <li className="has-children">
-                    <a href="#dropdown">Danh mục</a>
+                    <a href="#dropdown">Danh mục sản phẩm</a>
                     <ul className="dropdown">
-                      <li><a href="#supplements">Thực phẩm bổ sung</a></li>
-                      <li className="has-children">
-                        <a href="#vitamins">Vitamins</a>
-                      </li>
-                      <li><a href="#nutrition">Chế độ dinh dưỡng &amp; Dinh dưỡng</a></li>
-                      <li><a href="#tea">Trà &amp; Cà phê</a></li>
+                      <li><a href="#suongkhop">Sản phẩn về sương khớp</a></li>
+                      <li><a href="#lamdep">Sản phẩm về làm đẹp</a></li>
+                      <li><a href="#nutrition">Sản phẩm về hồi phục sức khỏe</a></li>
+
                     </ul>
                   </li>
                   <li>
-                    <Link href="/about">Giới thiệu</Link>
+                    <Link href="/shop">Sản phầm khuyến mãi</Link>
                   </li>
                   <li>
-                    <Link href="/contact">Liên hệ</Link>
+                    <Link href="/about_supplier">Thông tin nhà cung cấp</Link>
+                  </li>
+                  <li>
+                    <Link href="/about_stories">Hệ thống cửa hàng</Link>
+                  </li>
+                  <li>
+                    <Link href="/contact">Tư vấn</Link>
                   </li>
                 </ul>
               </nav>
@@ -139,7 +140,7 @@ export default function Header() {
               </button>
             </div>
             <div className="site-mobile-menu-logo">
-              <Link href="/">D1205 Pharma</Link>
+              <Link href="/">Chăm sóc sức khỏe 4.0</Link>
             </div>
           </div>
           <div className="site-mobile-menu-body">

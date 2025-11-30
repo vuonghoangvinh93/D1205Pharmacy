@@ -75,7 +75,7 @@ export default function Home() {
             <div className="col-lg-7 mx-auto order-lg-2 align-self-center">
               <div className="site-block-cover-content text-center">
                 <h2 className="sub-title">Thuốc hiệu quả, Thuốc mới mỗi ngày</h2>
-                <h1>Chào mừng đến với D1205 Pharma</h1>
+                <h1>Chào mừng đến với Chăm sóc sức khỏe 4.0</h1>
                 <p>
                   <Link href="/shop" className="btn btn-primary px-5 py-3">Mua ngay</Link>
                 </p>

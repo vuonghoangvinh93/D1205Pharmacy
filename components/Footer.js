@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="block-7">
               <h3 className="footer-heading mb-4">Chúng tôi</h3>
               <p>
-                Cửa hàng D1205 Pharma cam kết cung cấp các sản phẩm chăm sóc sức khỏe và làm đẹp chất lượng cao với giá cả phải chăng. Sứ mệnh của chúng tôi là mang đến sự hài lòng tối đa cho khách hàng thông qua dịch vụ tận tâm và sản phẩm chất lượng.
+                Cửa hàng Chăm sóc sức khỏe 4.0 cam kết cung cấp các sản phẩm chăm sóc sức khỏe và làm đẹp chất lượng cao với giá cả phải chăng. Sứ mệnh của chúng tôi là mang đến sự hài lòng tối đa cho khách hàng thông qua dịch vụ tận tâm và sản phẩm chất lượng.
               </p>
             </div>
           </div>
