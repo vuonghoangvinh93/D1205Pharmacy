@@ -50,10 +50,17 @@
 .category-list a {
   color: #5c626e;
   font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .category-list a:hover {
   color: #51eaea;
+}
+
+.category-list a.active {
+  color: #51eaea;
+  font-weight: 600;
 }
 
 .price-range {

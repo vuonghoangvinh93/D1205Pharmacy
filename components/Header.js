@@ -84,16 +84,12 @@ export default function Header() {
                     <Link href="/">Trang chủ</Link>
                   </li>
                   <li className="has-children">
-                    <a href="#dropdown">Danh mục sản phẩm</a>
+                    <a href="/shop">Danh mục sản phẩm</a>
                     <ul className="dropdown">
-                      <li><a href="#suongkhop">Sản phẩn về sương khớp</a></li>
-                      <li><a href="#lamdep">Sản phẩm về làm đẹp</a></li>
-                      <li><a href="#nutrition">Sản phẩm về hồi phục sức khỏe</a></li>
-
+                      <li><a href="/shop#suongkhop">Sương khớp</a></li>
+                      <li><a href="/shop#lamdep">Làm đẹp</a></li>
+                      <li><a href="/shop#nutrition">Hồi phục sức khỏe</a></li>
                     </ul>
-                  </li>
-                  <li>
-                    <Link href="/shop">Sản phầm khuyến mãi</Link>
                   </li>
                   <li>
                     <Link href="/about_supplier">Thông tin nhà cung cấp</Link>
@@ -146,7 +142,7 @@ export default function Header() {
           <div className="site-mobile-menu-body">
             <ul className="site-nav-wrap">
               <li><Link href="/">Trang chủ</Link></li>
-              <li><Link href="/shop">Cửa hàng</Link></li>
+              <li><Link href="/shop">Sản phẩm</Link></li>
               <li><a href="#about">Giới thiệu</a></li>
               <li><Link href="/contact">Liên hệ</Link></li>
             </ul>

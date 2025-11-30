@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
@@ -9,16 +10,43 @@ import './shop.css';
 
 export default function Shop() {
   const allProducts = [
-    { id: 1, name: 'Bioderma', image: '/images/product_01.png', price: 95.00, salePrice: 55.00, isOnSale: true },
-    { id: 2, name: 'Chanca Piedra', image: '/images/product_02.png', price: 70.00, salePrice: null, isOnSale: false },
-    { id: 3, name: 'Umcka Cold Care', image: '/images/product_03.png', price: 120.00, salePrice: null, isOnSale: false },
-    { id: 4, name: 'Cetyl Pure', image: '/images/product_04.png', price: 45.00, salePrice: 20.00, isOnSale: false },
-    { id: 5, name: 'CLA Core', image: '/images/product_05.png', price: 38.00, salePrice: null, isOnSale: false },
-    { id: 6, name: 'Poo Pourri', image: '/images/product_06.png', price: 89.00, salePrice: 38.00, isOnSale: true },
-    { id: 7, name: 'Bioderma', image: '/images/product_01.png', price: 95.00, salePrice: 55.00, isOnSale: true },
-    { id: 8, name: 'Chanca Piedra', image: '/images/product_02.png', price: 70.00, salePrice: null, isOnSale: false },
-    { id: 9, name: 'Umcka Cold Care', image: '/images/product_03.png', price: 120.00, salePrice: null, isOnSale: false },
+    { id: 1, name: 'Bioderma', image: '/images/product_01.png', price: 95.00, salePrice: 55.00, isOnSale: true, category: 'suongkhop' },
+    { id: 2, name: 'Chanca Piedra', image: '/images/product_02.png', price: 70.00, salePrice: null, isOnSale: false, category: 'suongkhop' },
+    { id: 3, name: 'Umcka Cold Care', image: '/images/product_03.png', price: 120.00, salePrice: null, isOnSale: false, category: 'suongkhop' },
+    { id: 4, name: 'Cetyl Pure', image: '/images/product_04.png', price: 45.00, salePrice: 20.00, isOnSale: false, category: 'lamdep' },
+    { id: 5, name: 'CLA Core', image: '/images/product_05.png', price: 38.00, salePrice: null, isOnSale: false, category: 'lamdep' },
+    { id: 6, name: 'Poo Pourri', image: '/images/product_06.png', price: 89.00, salePrice: 38.00, isOnSale: true, category: 'lamdep' },
+    { id: 7, name: 'Bioderma', image: '/images/product_01.png', price: 95.00, salePrice: 55.00, isOnSale: true, category: 'nutrition' },
+    { id: 8, name: 'Chanca Piedra', image: '/images/product_02.png', price: 70.00, salePrice: null, isOnSale: false, category: 'nutrition' },
+    { id: 9, name: 'Umcka Cold Care', image: '/images/product_03.png', price: 120.00, salePrice: null, isOnSale: false, category: 'nutrition' },
   ];
+
+  const [selectedCategory, setSelectedCategory] = useState('');
+
+  useEffect(() => {
+    // Đọc hash từ URL khi component mount hoặc hash thay đổi
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash === 'suongkhop' || hash === 'lamdep' || hash === 'nutrition') {
+        setSelectedCategory(hash);
+      } else {
+        setSelectedCategory('');
+      }
+    };
+
+    // Xử lý khi hash thay đổi
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
+  // Filter sản phẩm dựa trên category được chọn
+  const filteredProducts = selectedCategory
+    ? allProducts.filter(product => product.category === selectedCategory)
+    : allProducts;
 
   return (
     <>
@@ -29,7 +57,7 @@ export default function Shop() {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="site-section-heading text-center">Cửa hàng</h2>
+              <h2 className="site-section-heading text-center">Sản phẩm</h2>
             </div>
           </div>
         </div>
@@ -41,9 +69,15 @@ export default function Shop() {
           <div className="row">
             <div className="col-md-9">
               <div className="row mb-5">
-                {allProducts.map((product) => (
-                  <ProductCard key={product.id} {...product} />
-                ))}
+                {filteredProducts.length > 0 ? (
+                  filteredProducts.map((product) => (
+                    <ProductCard key={product.id} {...product} />
+                  ))
+                ) : (
+                  <div className="col-12 text-center">
+                    <p>Không có sản phẩm nào trong danh mục này.</p>
+                  </div>
+                )}
               </div>
 
               {/* Pagination */}
@@ -65,10 +99,26 @@ export default function Shop() {
                 <div className="sidebar-box mb-5">
                   <h3 className="h4">Danh mục</h3>
                   <ul className="list-unstyled category-list">
-                    <li><a href="#supplements">Thực phẩm bổ sung</a> (15)</li>
-                    <li><a href="#vitamins">Vitamin</a> (8)</li>
-                    <li><a href="#nutrition">Chế độ ăn &amp; Dinh dưỡng</a> (12)</li>
-                    <li><a href="#tea">Trà &amp; Cà phê</a> (5)</li>
+                    <li>
+                      <Link href="/shop" className={selectedCategory === '' ? 'active' : ''}>
+                        Tất cả sản phẩm
+                      </Link> ({allProducts.length})
+                    </li>
+                    <li>
+                      <Link href="/shop#suongkhop" className={selectedCategory === 'suongkhop' ? 'active' : ''}>
+                        Sương khớp
+                      </Link> ({allProducts.filter(p => p.category === 'suongkhop').length})
+                    </li>
+                    <li>
+                      <Link href="/shop#lamdep" className={selectedCategory === 'lamdep' ? 'active' : ''}>
+                        Làm đẹp
+                      </Link> ({allProducts.filter(p => p.category === 'lamdep').length})
+                    </li>
+                    <li>
+                      <Link href="/shop#nutrition" className={selectedCategory === 'nutrition' ? 'active' : ''}>
+                        Dinh dưỡng
+                      </Link> ({allProducts.filter(p => p.category === 'nutrition').length})
+                    </li>
                   </ul>
                 </div>
 

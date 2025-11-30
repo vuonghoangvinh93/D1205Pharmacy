@@ -94,20 +94,32 @@
   top: -2px;
 }
 
+/* Thêm padding-bottom để tạo vùng hover lớn hơn */
+.site-menu li.has-children > a {
+  padding-bottom: 15px;
+}
+
 .site-menu li.has-children .dropdown {
   display: none;
   position: absolute;
-  top: 100%;
+  top: calc(100% - 10px);
   left: 0;
   background: #fff;
   list-style: none;
   padding: 20px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 10px;
+  margin-top: 0;
   min-width: 200px;
+  z-index: 1000;
+  padding-top: 20px;
 }
 
 .site-menu li.has-children:hover .dropdown {
+  display: block;
+}
+
+/* Đảm bảo dropdown vẫn hiển thị khi hover vào nó */
+.site-menu li.has-children .dropdown:hover {
   display: block;
 }
 

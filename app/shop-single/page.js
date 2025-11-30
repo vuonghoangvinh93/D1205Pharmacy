@@ -46,7 +46,7 @@ export default function ShopSingle({ params }) {
           <div className="breadcrumb">
             <Link href="/">Trang chủ</Link>
             <span>/</span>
-            <Link href="/shop">Cửa hàng</Link>
+            <Link href="/shop">Sản phẩm</Link>
             <span>/</span>
             <span>{product.name}</span>
           </div>
