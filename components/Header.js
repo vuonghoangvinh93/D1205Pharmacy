@@ -89,7 +89,11 @@ export default function Header() {
                       <li><a href="/shop#suongkhop">Sương khớp</a></li>
                       <li><a href="/shop#lamdep">Làm đẹp</a></li>
                       <li><a href="/shop#nutrition">Hồi phục sức khỏe</a></li>
+                      <li><a href="/shop/sale">Khuyến mãi</a></li>
                     </ul>
+                  </li>
+                  <li>
+                    <Link href="/your_body">Lắng nghe cơ thể bạn</Link>
                   </li>
                   <li>
                     <Link href="/about_supplier">Thông tin nhà cung cấp</Link>
