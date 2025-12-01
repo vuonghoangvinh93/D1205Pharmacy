@@ -96,10 +96,10 @@ export default function Header() {
                     <Link href="/your_body">Lắng nghe cơ thể bạn</Link>
                   </li>
                   <li>
-                    <Link href="/about_supplier">Thông tin nhà cung cấp</Link>
+                    <Link href="/supplier">Thông tin nhà cung cấp</Link>
                   </li>
                   <li>
-                    <Link href="/about_stories">Hệ thống cửa hàng</Link>
+                    <Link href="/store">Hệ thống cửa hàng</Link>
                   </li>
                   <li>
                     <Link href="/contact">Tư vấn</Link>

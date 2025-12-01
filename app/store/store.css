@@ -1,0 +1,373 @@
+/* Store Page Styles */
+
+.store-locator-section {
+  padding: 50px 0;
+  background: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .store-locator-section {
+    padding: 80px 0;
+  }
+}
+
+.store-locator-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.store-locator-section .row {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.store-list-sidebar {
+  padding: 30px;
+  background: #f8f9fa;
+  border-right: 1px solid #e9ecef;
+  border-radius: 8px 0 0 8px;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  min-height: 700px;
+}
+
+.search-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 15px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #51eaea;
+  box-shadow: 0 0 0 3px rgba(81, 234, 234, 0.1);
+  background: #ffffff;
+}
+
+.search-input::placeholder {
+  color: #adb5bd;
+}
+
+.current-location-btn {
+  padding: 12px 24px;
+  border: 2px solid #51eaea;
+  color: #51eaea;
+  background: #ffffff;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-transform: none;
+}
+
+.current-location-btn:hover {
+  background: #51eaea;
+  color: #000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(81, 234, 234, 0.3);
+}
+
+.filter-container {
+  margin-bottom: 25px;
+}
+
+.filter-container .form-control {
+  font-size: 14px;
+  padding: 10px 14px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  height: auto;
+}
+
+.filter-container .form-control:focus {
+  outline: none;
+  border-color: #51eaea;
+  box-shadow: 0 0 0 3px rgba(81, 234, 234, 0.1);
+}
+
+.filter-container .form-control:disabled {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.store-list-container {
+  margin-top: 25px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.store-list-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #25262a;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #51eaea;
+  letter-spacing: -0.5px;
+}
+
+.store-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.store-item {
+  background: #ffffff;
+  padding: 24px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.store-item:last-child {
+  margin-bottom: 0;
+}
+
+.store-item:hover {
+  border-color: #51eaea;
+  box-shadow: 0 4px 12px rgba(81, 234, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.store-item.active {
+  border-color: #51eaea;
+  background: linear-gradient(135deg, #f0fdfd 0%, #ffffff 100%);
+  box-shadow: 0 4px 12px rgba(81, 234, 234, 0.25);
+}
+
+.store-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #25262a;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  letter-spacing: -0.3px;
+}
+
+.store-address {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 10px;
+  line-height: 1.7;
+  display: flex;
+  align-items: flex-start;
+}
+
+.store-address i {
+  margin-right: 8px;
+  color: #51eaea;
+  margin-top: 3px;
+  flex-shrink: 0;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.store-pharmacist {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.store-pharmacist strong {
+  color: #25262a;
+  font-weight: 600;
+}
+
+.store-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid #e9ecef;
+  margin-top: 4px;
+}
+
+.store-actions .btn-link {
+  color: #51eaea;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.store-actions .btn-link:hover {
+  color: #25262a;
+  text-decoration: none;
+}
+
+.store-actions .divider {
+  color: #dee2e6;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* Map Container */
+.map-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: stretch;
+  max-width: 100%;
+  width: 100%;
+  align-self: stretch;
+}
+
+.map-controls {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+}
+
+.map-view-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.map-view-buttons .btn {
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 2px solid #e9ecef;
+  background: #ffffff;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.map-view-buttons .btn:hover {
+  border-color: #51eaea;
+  color: #51eaea;
+}
+
+.map-view-buttons .btn.active {
+  background: #51eaea;
+  color: #000;
+  border-color: #51eaea;
+}
+
+.map-wrapper {
+  border-radius: 0 8px 8px 0;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  height: 700px;
+  background: #f8f9fa;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  flex: 1;
+}
+
+.store-map {
+  width: 100%;
+  height: 700px;
+  border: none;
+  display: block;
+  min-width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .store-list-sidebar {
+    margin-bottom: 30px;
+    border-right: none;
+    border-bottom: 2px solid #e9ecef;
+    border-radius: 8px 8px 0 0;
+    padding-bottom: 30px;
+  }
+
+  .map-container {
+    padding: 0 20px 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .map-wrapper {
+    border-radius: 0 0 8px 8px;
+    height: 600px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .store-map {
+    height: 600px;
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .store-locator-section {
+    padding: 50px 0;
+  }
+
+  .store-list-sidebar {
+    padding: 20px;
+  }
+
+  .map-container {
+    padding: 0 15px 15px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .map-wrapper {
+    height: 500px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .store-map {
+    height: 500px;
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .filter-container .row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .filter-container .col-6 {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .store-item {
+    padding: 20px;
+  }
+
+  .store-name {
+    font-size: 16px;
+  }
+}
+

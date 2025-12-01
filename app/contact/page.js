@@ -15,11 +15,13 @@ export default function Contact() {
       <Header />
 
       {/* Page Title */}
-      <div className="site-section">
+      <div className="site-blocks-cover" style={{ backgroundImage: "url('/images/hero_1.jpg')" }}>
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="site-section-heading text-center">Liên hệ chúng tôi để được tư vấn kĩ hơn</h2>
+              <div className="site-block-cover-content text-center">
+                <h2 className="site-section-heading">Liên hệ chúng tôi để được tư vấn kĩ hơn</h2>
+              </div>
             </div>
           </div>
         </div>

@@ -139,6 +139,34 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 40px;
 }
 
+/* Hero Banner / Cover Section */
+.site-blocks-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 46px 0;
+  min-height: 228px;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .site-blocks-cover {
+    min-height: 319px;
+  }
+}
+
+.site-block-cover-content {
+  color: #fff;
+}
+
+.site-block-cover-content h1,
+.site-block-cover-content h2,
+.site-block-cover-content h3 {
+  color: #fff;
+}
+
 /* Utility Classes */
 .text-center {
   text-align: center;
