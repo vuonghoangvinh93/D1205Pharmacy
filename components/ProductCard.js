@@ -2,6 +2,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import './ProductCard.css';
 
+function formatCurrencyVND(amount) {
+  return amount.toLocaleString('vi-VN', {
+    style: 'currency',
+    currency: 'VND'
+  });
+}
+
 export default function ProductCard({ id, name, image, price, salePrice, isOnSale = false }) {
   return (
     <div className="col-sm-6 col-lg-4 text-center item mb-4">
@@ -21,10 +28,10 @@ export default function ProductCard({ id, name, image, price, salePrice, isOnSal
       <p className="price">
         {salePrice ? (
           <>
-            <del>${price.toFixed(2)}</del> &mdash; ${salePrice.toFixed(2)}
+            <del>{formatCurrencyVND(price)}</del> &mdash; {formatCurrencyVND(salePrice)}
           </>
         ) : (
-          `$${price.toFixed(2)}`
+          formatCurrencyVND(price)
         )}
       </p>
     </div>

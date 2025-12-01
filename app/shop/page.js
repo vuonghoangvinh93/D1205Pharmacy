@@ -8,20 +8,28 @@ import Footer from '@/components/Footer';
 import ProductCard from '@/components/ProductCard';
 import './shop.css';
 
+function formatCurrencyVND(amount) {
+  return amount.toLocaleString('vi-VN', {
+    style: 'currency',
+    currency: 'VND'
+  });
+}
+
 export default function Shop() {
   const allProducts = [
-    { id: 1, name: 'Bioderma', image: '/images/product_01.png', price: 95.00, salePrice: 55.00, isOnSale: true, category: 'suongkhop', sale: true },
-    { id: 2, name: 'Chanca Piedra', image: '/images/product_02.png', price: 70.00, salePrice: null, isOnSale: false, category: 'suongkhop', sale: true },
-    { id: 3, name: 'Umcka Cold Care', image: '/images/product_03.png', price: 120.00, salePrice: null, isOnSale: false, category: 'suongkhop', sale: true },
-    { id: 4, name: 'Cetyl Pure', image: '/images/product_04.png', price: 45.00, salePrice: 20.00, isOnSale: false, category: 'lamdep', sale: false },
-    { id: 5, name: 'CLA Core', image: '/images/product_05.png', price: 38.00, salePrice: null, isOnSale: false, category: 'lamdep', sale: false },
-    { id: 6, name: 'Poo Pourri', image: '/images/product_06.png', price: 89.00, salePrice: 38.00, isOnSale: true, category: 'lamdep', sale: false },
-    { id: 7, name: 'Bioderma', image: '/images/product_01.png', price: 95.00, salePrice: 55.00, isOnSale: true, category: 'nutrition', sale: false },
-    { id: 8, name: 'Chanca Piedra', image: '/images/product_02.png', price: 70.00, salePrice: null, isOnSale: false, category: 'nutrition', sale: false },
-    { id: 9, name: 'Umcka Cold Care', image: '/images/product_03.png', price: 120.00, salePrice: null, isOnSale: false, category: 'nutrition', sale: false },
+    { id: 1, name: 'FlexGlu', image: '/images/khop1.png', price: 320000.00, salePrice: 220000.00, isOnSale: true, category: 'suongkhop', sale: true },
+    { id: 2, name: 'Chanca Piedra', image: '/images/product_02.png', price: 70000.00, salePrice: null, isOnSale: false, category: 'suongkhop', sale: true },
+    { id: 3, name: 'Umcka Cold Care', image: '/images/product_03.png', price: 120000.00, salePrice: null, isOnSale: false, category: 'suongkhop', sale: true },
+    { id: 4, name: 'Cetyl Pure', image: '/images/product_04.png', price: 450000.00, salePrice: 200000.00, isOnSale: false, category: 'lamdep', sale: false },
+    { id: 5, name: 'CLA Core', image: '/images/product_05.png', price: 380000.00, salePrice: null, isOnSale: false, category: 'lamdep', sale: false },
+    { id: 6, name: 'Poo Pourri', image: '/images/product_06.png', price: 89000.00, salePrice: 38000.00, isOnSale: true, category: 'lamdep', sale: false },
+    { id: 7, name: 'Bioderma', image: '/images/product_01.png', price: 95000.00, salePrice: 55000.00, isOnSale: true, category: 'nutrition', sale: false },
+    { id: 8, name: 'Chanca Piedra', image: '/images/product_02.png', price: 700000.00, salePrice: null, isOnSale: false, category: 'nutrition', sale: false },
+    { id: 9, name: 'Umcka Cold Care', image: '/images/product_03.png', price: 1200000.00, salePrice: null, isOnSale: false, category: 'nutrition', sale: false },
   ];
 
   const [selectedCategory, setSelectedCategory] = useState('');
+  const [maxPrice, setMaxPrice] = useState(5000000);
 
   useEffect(() => {
     // Đọc hash từ URL khi component mount hoặc hash thay đổi
@@ -43,10 +51,16 @@ export default function Shop() {
     };
   }, []);
 
-  // Filter sản phẩm dựa trên category được chọn
-  const filteredProducts = selectedCategory
-    ? allProducts.filter(product => product.category === selectedCategory)
-    : allProducts;
+  // Filter sản phẩm dựa trên category và khoảng giá được chọn
+  const filteredProducts = allProducts.filter(product => {
+    const matchCategory = selectedCategory
+      ? product.category === selectedCategory
+      : true;
+
+    const matchPrice = product.price <= maxPrice;
+
+    return matchCategory && matchPrice;
+  });
 
   return (
     <>
@@ -133,7 +147,19 @@ export default function Shop() {
                 <div className="sidebar-box mb-5">
                   <h3 className="h4">Khoảng giá</h3>
                   <div className="price-range">
-                    <input type="range" min="0" max="500" defaultValue="75" className="slider-input" />
+                    <input
+                      type="range"
+                      min="10000"
+                      max="5000000"
+                      value={maxPrice}
+                      onChange={(e) => setMaxPrice(Number(e.target.value))}
+                      className="slider-input"
+                    />
+                    <div className="price-range-label mt-2">
+                      <small>
+                        Từ 0 đến <strong>{formatCurrencyVND(maxPrice)}</strong>
+                      </small>
+                    </div>
                   </div>
                 </div>
 
@@ -151,7 +177,7 @@ export default function Shop() {
                         />
                       </div>
                       <h5><a href="#product1">Sản phẩm 1</a></h5>
-                      <p className="price">$45.00</p>
+                      <p className="price">{formatCurrencyVND(45000)}</p>
                     </div>
                     <div className="item mb-4">
                       <div className="item-img">
@@ -163,7 +189,7 @@ export default function Shop() {
                         />
                       </div>
                       <h5><a href="#product2">Sản phẩm 2</a></h5>
-                      <p className="price">$62.00</p>
+                      <p className="price">{formatCurrencyVND(62000)}</p>
                     </div>
                   </div>
                 </div>
