@@ -17,9 +17,9 @@ function formatCurrencyVND(amount) {
 
 export default function Shop() {
   const allProducts = [
-    { id: 1, name: 'FlexGlu', image: '/images/khop1.png', price: 320000, salePrice: 220000, isOnSale: true, category: 'suongkhop', sale: true },
-    { id: 3, name: 'Aquamovit', image: '/images/aquamovit.png', price: 520000, salePrice: 240000, isOnSale: true, category: 'suongkhop', sale: true },
-    { id: 2, name: 'Xương Khớp TW28', image: '/images/khoptw28.png', price: 340000, salePrice: 235000, isOnSale: true, category: 'suongkhop', sale: true },
+    { id: 1, name: 'FlexGlu', image: '/images/khop1.png', price: 320000, salePrice: 220000, isOnSale: true, category: 'xuongkhop', sale: true },
+    { id: 3, name: 'Aquamovit', image: '/images/aquamovit.png', price: 520000, salePrice: 240000, isOnSale: true, category: 'xuongkhop', sale: true },
+    { id: 2, name: 'Xương Khớp TW28', image: '/images/khoptw28.png', price: 340000, salePrice: 235000, isOnSale: true, category: 'xuongkhop', sale: true },
     { id: 4, name: 'Cetyl Pure', image: '/images/product_04.png', price: 450000.00, salePrice: 200000.00, isOnSale: false, category: 'lamdep', sale: false },
     { id: 5, name: 'CLA Core', image: '/images/product_05.png', price: 380000.00, salePrice: null, isOnSale: false, category: 'lamdep', sale: false },
     { id: 6, name: 'Poo Pourri', image: '/images/product_06.png', price: 89000.00, salePrice: 38000.00, isOnSale: true, category: 'lamdep', sale: false },
@@ -35,7 +35,7 @@ export default function Shop() {
     // Đọc hash từ URL khi component mount hoặc hash thay đổi
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '');
-      if (hash === 'suongkhop' || hash === 'lamdep' || hash === 'nutrition') {
+      if (hash === 'xuongkhop' || hash === 'lamdep' || hash === 'nutrition') {
         setSelectedCategory(hash);
       } else {
         setSelectedCategory('');
@@ -121,9 +121,9 @@ export default function Shop() {
                       </Link> ({allProducts.length})
                     </li>
                     <li>
-                      <Link href="/shop#suongkhop" className={selectedCategory === 'suongkhop' ? 'active' : ''}>
-                        Sương khớp
-                      </Link> ({allProducts.filter(p => p.category === 'suongkhop').length})
+                      <Link href="/shop#xuongkhop" className={selectedCategory === 'xuongkhop' ? 'active' : ''}>
+                        Xương khớp
+                      </Link> ({allProducts.filter(p => p.category === 'xuongkhop').length})
                     </li>
                     <li>
                       <Link href="/shop#lamdep" className={selectedCategory === 'lamdep' ? 'active' : ''}>

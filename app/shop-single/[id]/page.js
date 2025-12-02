@@ -24,7 +24,7 @@ const allProducts = [
     price: 320000, 
     salePrice: 220000, 
     isOnSale: true, 
-    category: 'suongkhop', 
+    category: 'xuongkhop', 
     sale: true,
     description: 'FlexGlu là sản phẩm bổ khớp chứa Glucosamine và Chondroitin, hỗ trợ tái tạo sụn khớp, giảm đau nhức và cải thiện khả năng vận động.',
     details: 'Giảm đau nhức, viêm khớp Bổ sung dưỡng chất cho sụn khớp như glucosamine, chondroitin, MSM, collagen type II… Hỗ trợ tái tạo và bảo vệ sụn khớp, làm chậm thoái hóa khớp. Tăng độ linh hoạt và vận động của khớp. Uống 2 viên một lần, ngày 2 lần. Thực phẩm này không phải là thuốc, không có tác dụng thay thế thuốc chữa bệnh. Không dùng cho người dưới 18 tuổi, phụ nữ có thai, phụ nữ cho con bú, người mẫn cảm với thành phần của thuốc.'
@@ -36,7 +36,7 @@ const allProducts = [
     price: 340000, 
     salePrice: 235000, 
     isOnSale: true, 
-    category: 'suongkhop', 
+    category: 'xuongkhop', 
     sale: true,
     description: 'Xương Khớp TW28 là sản phẩm Đông y hỗ trợ điều trị các bệnh về xương khớp, giảm đau nhức, tê bì chân tay và cải thiện lưu thông máu.',
     details: 'Giảm đau nhức, viêm khớp Bổ sung dưỡng chất cho sụn khớp như glucosamine, chondroitin, MSM, collagen type II… Hỗ trợ tái tạo và bảo vệ sụn khớp, làm chậm thoái hóa khớp. Tăng độ linh hoạt và vận động của khớp. Uống 2 viên một lần, ngày 2 lần. Thực phẩm này không phải là thuốc, không có tác dụng thay thế thuốc chữa bệnh. Không dùng cho người dưới 18 tuổi, phụ nữ có thai, phụ nữ cho con bú, người mẫn cảm với thành phần của thuốc.'
@@ -48,7 +48,7 @@ const allProducts = [
     price: 520000, 
     salePrice: 240000, 
     isOnSale: true, 
-    category: 'suongkhop', 
+    category: 'xuongkhop', 
     sale: true,
     description: 'Aquamovit là sản phẩm bổ khớp cao cấp chứa Collagen Type II, MSM và các dưỡng chất thiết yếu, giúp nuôi dưỡng sụn khớp từ bên trong.',
     details: 'Trẻ em: Hỗ trợ phát triển chiều cao. Tăng cường hình thành xương và răng. Giảm nguy cơ còi xương, chậm lớn. Thanh thiếu niên (giai đoạn dậy thì): Tăng mật độ xương tối ưu, vì đây là thời điểm xương phát triển mạnh nhất. Giúp cơ thể đạt chiều cao tối đa. Hỗ trợ hoạt động cơ – thần kinh khi vận động, học tập nhiều. Người trưởng thành: Duy trì xương chắc khỏe, hạn chế mất xương sớm. Hỗ trợ giảm nguy cơ đau nhức xương – khớp khi lao động nhiều. Ổn định chức năng cơ bắp, tim mạch và thần kinh. Phụ nữ mang thai & cho con bú: Giảm nguy cơ thiếu canxi, chuột rút. Hỗ trợ sự phát triển xương của thai nhi/trẻ bú mẹ. Bảo vệ xương và răng của mẹ. Người trung niên & người lớn tuổi: Làm chậm quá trình loãng xương. Giảm nguy cơ gãy xương. Cải thiện sức mạnh cơ bắp và thăng bằng, giúp hạn chế té ngã. Liều dùng : Uống 2 viên/ lần / ngày'

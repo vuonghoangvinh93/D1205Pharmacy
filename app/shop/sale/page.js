@@ -9,9 +9,9 @@ import '../shop.css';
 
 export default function SalePage() {
   const allProducts = [
-    { id: 1, name: 'FlexGlu', image: '/images/khop1.png', price: 320000, salePrice: 220000, isOnSale: true, category: 'suongkhop', sale: true },
-    { id: 3, name: 'Aquamovit', image: '/images/aquamovit.png', price: 520000, salePrice: 240000, isOnSale: true, category: 'suongkhop', sale: true },
-    { id: 2, name: 'Xương Khớp TW28', image: '/images/khoptw28.png', price: 340000, salePrice: 235000, isOnSale: true, category: 'suongkhop', sale: true },
+    { id: 1, name: 'FlexGlu', image: '/images/khop1.png', price: 320000, salePrice: 220000, isOnSale: true, category: 'xuongkhop', sale: true },
+    { id: 3, name: 'Aquamovit', image: '/images/aquamovit.png', price: 520000, salePrice: 240000, isOnSale: true, category: 'xuongkhop', sale: true },
+    { id: 2, name: 'Xương Khớp TW28', image: '/images/khoptw28.png', price: 340000, salePrice: 235000, isOnSale: true, category: 'xuongkhop', sale: true },
     { id: 4, name: 'Cetyl Pure', image: '/images/product_04.png', price: 45.00, salePrice: 20.00, isOnSale: false, category: 'lamdep', sale: false },
     { id: 5, name: 'CLA Core', image: '/images/product_05.png', price: 38.00, salePrice: null, isOnSale: false, category: 'lamdep', sale: false },
     { id: 6, name: 'Poo Pourri', image: '/images/product_06.png', price: 89.00, salePrice: 38.00, isOnSale: true, category: 'lamdep', sale: false },
@@ -78,9 +78,9 @@ export default function SalePage() {
                       </Link> ({allProducts.length})
                     </li>
                     <li>
-                      <Link href="/shop#suongkhop">
-                        Sương khớp
-                      </Link> ({allProducts.filter(p => p.category === 'suongkhop').length})
+                      <Link href="/shop#xuongkhop">
+                        xương khớp
+                      </Link> ({allProducts.filter(p => p.category === 'xuongkhop').length})
                     </li>
                     <li>
                       <Link href="/shop#lamdep">

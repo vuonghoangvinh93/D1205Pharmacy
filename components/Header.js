@@ -88,7 +88,7 @@ export default function Header() {
                   <li className={`has-children ${pathname?.startsWith('/shop') ? 'active' : ''}`}>
                     <a href="/shop">Danh mục sản phẩm</a>
                     <ul className="dropdown">
-                      <li><a href="/shop#suongkhop">Sương khớp</a></li>
+                      <li><a href="/shop#xuongkhop">Xương khớp</a></li>
                       <li><a href="/shop#lamdep">Làm đẹp</a></li>
                       <li><a href="/shop#nutrition">Hồi phục sức khỏe</a></li>
                       <li><a href="/shop/sale">Khuyến mãi</a></li>
