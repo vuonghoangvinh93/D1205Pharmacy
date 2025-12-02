@@ -1,0 +1,344 @@
+/* Disease Detail Page Styles */
+
+.disease-detail-section {
+  padding: 50px 0;
+  background: #ffffff;
+}
+
+.disease-detail-section .container {
+  position: relative;
+}
+
+.disease-detail-section .row {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap-reverse;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+  position: relative;
+  height: fit-content;
+}
+
+.sidebar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+  width: 100%;
+}
+
+/* Custom scrollbar for sidebar */
+.sidebar-sticky::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-sticky::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.sidebar-sticky::-webkit-scrollbar-thumb {
+  background: #51eaea;
+  border-radius: 10px;
+}
+
+.sidebar-sticky::-webkit-scrollbar-thumb:hover {
+  background: #3ddada;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  position: relative;
+}
+
+.nav-menu li a:hover {
+  color: #51eaea;
+  background: #f8f9fa;
+  text-decoration: none;
+}
+
+.nav-menu li.active a {
+  color: #51eaea;
+  background: #f0fdfd;
+  border-left-color: #51eaea;
+  font-weight: 600;
+}
+
+/* Main Content */
+.main-content {
+  padding-left: 40px;
+  min-height: 100vh;
+}
+
+.article-header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.article-date {
+  text-align: right;
+  color: #6c757d;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.article-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #25262a;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.article-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.category-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #25262a;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.category-tag:hover {
+  background: #51eaea;
+  border-color: #51eaea;
+  color: #000;
+  text-decoration: none;
+}
+
+.social-sharing {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.social-icon.facebook {
+  color: #1877f2;
+}
+
+.social-icon.zalo {
+  color: #0068ff;
+}
+
+.social-icon.link {
+  color: #6c757d;
+  border: none;
+  background: transparent;
+}
+
+.social-icon:hover {
+  background: #51eaea;
+  border-color: #51eaea;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.social-icon span {
+  font-size: 14px;
+}
+
+/* Article Content */
+.article-intro {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #51eaea;
+}
+
+.article-intro p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #25262a;
+  margin: 0;
+}
+
+.content-section {
+  margin-bottom: 50px;
+  scroll-margin-top: 100px;
+}
+
+.section-heading {
+  font-size: 26px;
+  font-weight: 700;
+  color: #25262a;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.subsection-heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: #25262a;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.section-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #495057;
+  margin-bottom: 20px;
+}
+
+/* Joint Images */
+.joint-images-container {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.joint-diagram {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .main-content {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    margin-bottom: 30px;
+    max-height: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+  }
+
+  .nav-menu li {
+    flex-shrink: 0;
+  }
+
+  .nav-menu li a {
+    white-space: nowrap;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .nav-menu li.active a {
+    border-left: none;
+    border-bottom-color: #51eaea;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .disease-detail-section {
+    padding: 30px 0;
+  }
+
+  .article-title {
+    font-size: 24px;
+  }
+
+  .section-heading {
+    font-size: 22px;
+  }
+
+  .subsection-heading {
+    font-size: 20px;
+  }
+
+  .joint-image {
+    font-size: 48px;
+  }
+
+  .article-intro {
+    padding: 15px;
+  }
+
+  .article-intro p,
+  .section-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .article-title {
+    font-size: 20px;
+  }
+
+  .article-date {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .category-tag {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
+  .social-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+}
+

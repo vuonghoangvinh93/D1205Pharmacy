@@ -4,3 +4,12 @@
   top: 0;
   z-index: 1000;
 }
+
+/* Active menu item highlight */
+.site-navbar .site-navigation .site-menu .active > a {
+  color: #51eaea !important;
+}
+
+.site-navbar .site-navigation .site-menu .active > a:before {
+  background: #51eaea !important;
+}

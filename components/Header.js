@@ -1,10 +1,12 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import './Header.css';
 
 export default function Header() {
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
@@ -80,10 +82,10 @@ export default function Header() {
             <div className="main-nav d-none d-lg-block">
               <nav className="site-navigation text-right text-md-center" role="navigation">
                 <ul className="site-menu d-none d-lg-block">
-                  <li className="active">
+                  <li className={pathname === '/' ? 'active' : ''}>
                     <Link href="/">Trang chủ</Link>
                   </li>
-                  <li className="has-children">
+                  <li className={`has-children ${pathname?.startsWith('/shop') ? 'active' : ''}`}>
                     <a href="/shop">Danh mục sản phẩm</a>
                     <ul className="dropdown">
                       <li><a href="/shop#suongkhop">Sương khớp</a></li>
@@ -92,16 +94,16 @@ export default function Header() {
                       <li><a href="/shop/sale">Khuyến mãi</a></li>
                     </ul>
                   </li>
-                  <li>
+                  <li className={pathname === '/your_body' ? 'active' : ''}>
                     <Link href="/your_body">Lắng nghe cơ thể bạn</Link>
                   </li>
-                  <li>
+                  <li className={pathname === '/supplier' ? 'active' : ''}>
                     <Link href="/supplier">Thông tin nhà cung cấp</Link>
                   </li>
-                  <li>
+                  <li className={pathname === '/store' ? 'active' : ''}>
                     <Link href="/store">Hệ thống cửa hàng</Link>
                   </li>
-                  <li>
+                  <li className={pathname === '/contact' ? 'active' : ''}>
                     <Link href="/contact">Tư vấn</Link>
                   </li>
                 </ul>

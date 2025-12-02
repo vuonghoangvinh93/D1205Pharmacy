@@ -1,8 +1,325 @@
 /* Your Body Page Styles */
 
-.your-body-content {
-  padding: 30px;
-  background: #fff;
-  border-radius: 4px;
+.search-section {
+  padding: 30px 0;
+  background: #ffffff;
 }
 
+.search-bar-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.search-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  z-index: 1;
+}
+
+.search-input {
+  width: 100%;
+  padding: 16px 20px 16px 55px;
+  border: 2px solid #e9ecef;
+  border-radius: 50px;
+  font-size: 16px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #51eaea;
+  box-shadow: 0 4px 12px rgba(81, 234, 234, 0.2);
+}
+
+.search-input::placeholder {
+  color: #adb5bd;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #25262a;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Disease Cards */
+.disease-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #e9ecef;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  height: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.disease-card:hover {
+  border-color: #51eaea;
+  box-shadow: 0 4px 12px rgba(81, 234, 234, 0.2);
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+.disease-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.disease-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #25262a;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Demographic Cards */
+.demographic-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+  position: relative;
+  height: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.demographic-card:hover {
+  border-color: #51eaea;
+  box-shadow: 0 4px 12px rgba(81, 234, 234, 0.2);
+  transform: translateY(-3px);
+}
+
+.demographic-image {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.demographic-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.demographic-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #25262a;
+  margin-bottom: 15px;
+}
+
+.disease-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.disease-list li {
+  font-size: 14px;
+  color: #6c757d;
+  padding: 6px 0;
+  border-bottom: 1px solid #f0f0f0;
+  line-height: 1.6;
+}
+
+.disease-list li:last-child {
+  border-bottom: none;
+}
+
+.arrow-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #51eaea;
+  font-weight: bold;
+}
+
+/* Body Part Cards */
+.body-part-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 15px;
+  background: #ffffff;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  border: 2px solid #e9ecef;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+}
+
+.body-part-card:hover {
+  border-color: #51eaea;
+  box-shadow: 0 4px 12px rgba(81, 234, 234, 0.2);
+  transform: translateY(-3px) scale(1.05);
+  text-decoration: none;
+}
+
+.body-part-icon {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.body-part-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #25262a;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* Specialty Tags */
+.specialty-tag {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #ffffff;
+  border: 2px solid #e9ecef;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #25262a;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.specialty-tag:hover {
+  background: #51eaea;
+  border-color: #51eaea;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(81, 234, 234, 0.3);
+  text-decoration: none;
+}
+
+/* View More Button */
+.btn-view-more {
+  padding: 12px 40px;
+  background: #51eaea;
+  color: #000;
+  border: 2px solid #51eaea;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-view-more:hover {
+  background: transparent;
+  color: #51eaea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(81, 234, 234, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .body-part-card {
+    width: 100px;
+    height: 100px;
+    padding: 20px 10px;
+  }
+
+  .body-part-icon {
+    font-size: 32px;
+  }
+
+  .body-part-name {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .disease-card {
+    padding: 15px 10px;
+  }
+
+  .disease-icon {
+    font-size: 36px;
+  }
+
+  .disease-name {
+    font-size: 12px;
+  }
+
+  .demographic-card {
+    padding: 20px;
+  }
+
+  .demographic-image {
+    height: 150px;
+  }
+
+  .body-part-card {
+    width: 90px;
+    height: 90px;
+    padding: 15px 8px;
+  }
+
+  .body-part-icon {
+    font-size: 28px;
+  }
+
+  .body-part-name {
+    font-size: 11px;
+  }
+
+  .specialty-tag {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-input {
+    padding: 14px 18px 14px 50px;
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .disease-card {
+    padding: 12px 8px;
+  }
+
+  .disease-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+
+  .disease-name {
+    font-size: 11px;
+  }
+}

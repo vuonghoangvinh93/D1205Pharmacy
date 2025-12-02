@@ -9,9 +9,9 @@ import '../shop.css';
 
 export default function SalePage() {
   const allProducts = [
-    { id: 1, name: 'Bioderma', image: '/images/product_01.png', price: 95.00, salePrice: 55.00, isOnSale: true, category: 'suongkhop', sale: true },
-    { id: 2, name: 'Chanca Piedra', image: '/images/product_02.png', price: 70.00, salePrice: null, isOnSale: false, category: 'suongkhop', sale: true },
-    { id: 3, name: 'Umcka Cold Care', image: '/images/product_03.png', price: 120.00, salePrice: null, isOnSale: false, category: 'suongkhop', sale: true },
+    { id: 1, name: 'FlexGlu', image: '/images/khop1.png', price: 320000, salePrice: 220000, isOnSale: true, category: 'suongkhop', sale: true },
+    { id: 3, name: 'Aquamovit', image: '/images/aquamovit.png', price: 520000, salePrice: 240000, isOnSale: true, category: 'suongkhop', sale: true },
+    { id: 2, name: 'Xương Khớp TW28', image: '/images/khoptw28.png', price: 340000, salePrice: 235000, isOnSale: true, category: 'suongkhop', sale: true },
     { id: 4, name: 'Cetyl Pure', image: '/images/product_04.png', price: 45.00, salePrice: 20.00, isOnSale: false, category: 'lamdep', sale: false },
     { id: 5, name: 'CLA Core', image: '/images/product_05.png', price: 38.00, salePrice: null, isOnSale: false, category: 'lamdep', sale: false },
     { id: 6, name: 'Poo Pourri', image: '/images/product_06.png', price: 89.00, salePrice: 38.00, isOnSale: true, category: 'lamdep', sale: false },
@@ -115,26 +115,26 @@ export default function SalePage() {
                     <div className="item mb-4">
                       <div className="item-img">
                         <Image
-                          src="/images/product_01.png"
+                          src="/images/khop1.png"
                           alt="Product"
                           width={100}
                           height={100}
                         />
                       </div>
                       <h5><a href="#product1">Sản phẩm 1</a></h5>
-                      <p className="price">$45.00</p>
+                      <p className="price">220.000 VNĐ</p>
                     </div>
                     <div className="item mb-4">
                       <div className="item-img">
                         <Image
-                          src="/images/product_02.png"
+                          src="/images/aquamovit.png"
                           alt="Product"
                           width={100}
                           height={100}
                         />
                       </div>
                       <h5><a href="#product2">Sản phẩm 2</a></h5>
-                      <p className="price">$62.00</p>
+                      <p className="price">240.000 VNĐ</p>
                     </div>
                   </div>
                 </div>

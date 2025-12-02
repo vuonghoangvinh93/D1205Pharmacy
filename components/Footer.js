@@ -23,8 +23,7 @@ export default function Footer() {
               <li><a href="#supplements">Thực phẩm bổ sung</a></li>
               <li><a href="#vitamins">Vitamins</a></li>
               <li><a href="#nutrition">Chế độ dinh dưỡng &amp; Dinh dưỡng</a></li>
-              <li><a href="#tea">Trà &amp; Cà phê</a></li>
-            </ul>
+              </ul>
           </div>
 
           <div className="col-md-6 col-lg-3">

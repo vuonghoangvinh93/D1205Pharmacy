@@ -7,10 +7,17 @@ import Image from 'next/image';
 import { useState } from 'react';
 import './cart.css';
 
+function formatCurrencyVND(amount) {
+  return amount.toLocaleString('vi-VN', {
+    style: 'currency',
+    currency: 'VND',
+  });
+}
+
 export default function Cart() {
   const [cartItems, setCartItems] = useState([
-    { id: 1, name: 'Bioderma', price: 55.00, quantity: 1, image: '/images/product_01.png' },
-    { id: 2, name: 'Chanca Piedra', price: 70.00, quantity: 2, image: '/images/product_02.png' },
+    { id: 1, name: 'FlexGlu', price: 220000, quantity: 1, image: '/images/khop1.png' },
+    { id: 2, name: 'Aquamovit', price: 240000, quantity: 2, image: '/images/aquamovit.png' },
   ]);
 
   const updateQuantity = (id, newQuantity) => {
@@ -76,7 +83,7 @@ export default function Cart() {
                               </div>
                             </div>
                           </td>
-                          <td>${item.price.toFixed(2)}</td>
+                          <td>{formatCurrencyVND(item.price)}</td>
                           <td>
                             <div className="qty-controls">
                               <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>−</button>
@@ -88,7 +95,7 @@ export default function Cart() {
                               <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
                             </div>
                           </td>
-                          <td>${(item.price * item.quantity).toFixed(2)}</td>
+                          <td>{formatCurrencyVND(item.price * item.quantity)}</td>
                           <td>
                             <button
                               className="remove-btn"
@@ -109,15 +116,15 @@ export default function Cart() {
                   <h3>Tổng đơn hàng</h3>
                   <div className="summary-row">
                     <span>Tạm tính:</span>
-                    <span>${subtotal.toFixed(2)}</span>
+                    <span>{formatCurrencyVND(subtotal)}</span>
                   </div>
                   <div className="summary-row">
                     <span>Thuế (10%):</span>
-                    <span>${tax.toFixed(2)}</span>
+                    <span>{formatCurrencyVND(tax)}</span>
                   </div>
                   <div className="summary-row total">
                     <span>Tổng cộng:</span>
-                    <span>${total.toFixed(2)}</span>
+                    <span>{formatCurrencyVND(total)}</span>
                   </div>
                   <Link href="/checkout" className="btn btn-primary btn-block">
                     Tiến hành thanh toán
