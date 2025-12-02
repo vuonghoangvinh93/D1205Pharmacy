@@ -10,9 +10,9 @@ import { useEffect } from 'react';
 
 export default function Home() {
   const products = [
-    { id: 1, name: 'Bioderma', image: '/images/product_01.png', price: 95.00, salePrice: 55.00, isOnSale: true },
-    { id: 2, name: 'Chanca Piedra', image: '/images/product_02.png', price: 70.00, salePrice: null, isOnSale: false },
-    { id: 3, name: 'Umcka Cold Care', image: '/images/product_03.png', price: 120.00, salePrice: null, isOnSale: false },
+    { id: 1, name: 'FlexGlu', image: '/images/khop1.png', price: 320000, salePrice: 220000, isOnSale: true },
+    { id: 2, name: 'Aquamovit', image: '/images/aquamovit.png', price: 520000, salePrice: 240000, isOnSale: true },
+    { id: 3, name: 'Xương Khớp TW28', image: '/images/khoptw28.png', price: 340000, salePrice: 235000, isOnSale: true },
   ];
 
   // const newProducts = [
